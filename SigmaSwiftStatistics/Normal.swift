@@ -62,7 +62,7 @@ public extension Sigma {
   */
   static func normalDensity(x: Double, μ: Double = 0, σ: Double = 1) -> Double?  {
     if σ <= 0 { return nil }
-    return (1 / sqrt(2 * pow(σ,2) * Double.pi)) * pow(M_E, (-( pow(x - μ, 2) / (2 * pow(σ, 2)) )))
+    return (1 / sqrt(2 * pow(σ,2) * Double.pi)) * pow(exp(1.0), (-( pow(x - μ, 2) / (2 * pow(σ, 2)) )))
   }
   
   /**
